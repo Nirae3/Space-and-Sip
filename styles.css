@@ -199,3 +199,93 @@
 
 
 }
+
+
+
+
+/* Hero Section CSS */
+.main{
+    background-color: #D0B49B;
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 80vh;
+    background-color: #d8c4b3;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 90px;
+}
+
+.main__content h1 {
+    font-size: 4rem;
+    background-color: #301e14;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #301e14;
+    -webkit-background-clip: text;
+    font-family: 'Allura', sans-serif;
+}
+
+.main__btn{
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    background-color: #301e14;
+    color: #D0B49B;
+    margin-top: 2rem;
+    position: relative;
+    transition: all 0.35s;
+    outline: none
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f77062;
+    transition:  all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover{
+    color: #fff;
+}
+
+.main__btn:hover::after {
+    width: 100%;
+}
+
+#main__img {
+    width: 100%;  /* Makes sure the image doesn't exceed its container */
+    max-width: 360px;  /* Limits the maximum width */
+    height: auto;  /* Keeps the aspect ratio */
+    margin-top: 0%;
+    /* transform: translate(150px, -20px); */
+
+}
