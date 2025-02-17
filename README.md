@@ -2,7 +2,7 @@
 Website Prototype
 
 BUGS:
-Schedle!!!
+Schedule!!!
 
 - After selecting the date and time, the back button works, but the X button doesn't when choosing a room.
 - Once a room is selected on the "Make Reservation!" page, the back button may or may not work. The X button should work.
