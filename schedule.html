@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="styles_schedule.css">
+    <link rel="icon" href="Images/logo_cup.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="Images/logo_cup.png" alt="Logo" style="height: 85px; vertical-align: middle; margin-right: 10px;">
+                SPACE AND SIP</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Gallery</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Services</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button">Schedule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<body>
+
+    <div class="side-content">
+        <div class="schedule-container">
+            <div class="calendar">
+                <button id="prev-week" class="nav-button">&lt;</button>
+                <div id="dates">
+                    <div class="date selected" data-day="Monday">MON<br>28</div>
+                    <div class="date" data-day="Tuesday">TUE<br>29</div>
+                    <div class="date" data-day="Wednesday">WED<br>30</div>
+                    <div class="date" data-day="Thursday">THU<br>31</div>
+                    <div class="date" data-day="Friday">FRI<br>1</div>
+                    <div class="date" data-day="Saturday">SAT<br>2</div>
+                    <div class="date" data-day="Sunday">SUN<br>3</div>
+
+                </div>
+                <button id="next-week" class="nav-button">&gt;</button>
+            </div>
+            <div class="times">
+                <button class="time">9:00am</button>
+                <button class="time">10:00am</button>
+                <button class="time">11:00am</button>
+                <button class="time">12:00pm</button>
+                <button class="time">2:00pm</button>
+                <button class="time">4:00pm</button>
+                <button class="time">5:00pm</button>
+            </div>
+            <button id="next-button" class=""button> Next</button>
+        </div>
+    
+        <div class="image__container">
+            <img src="Images/rooms/room2.jpg" alt="Right Image">
+        </div>
+
+        <div id="room-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-room-modal" class="close">&times;</span>
+                <span class="close">&times;</span>
+                <button id="back-button">Back</button>
+                <h2>Select a Room</h2>
+                <div id="room-options">
+                    <div class="room-option">
+                        <img src="Images/rooms/room1.jpg" alt="Anastasia">
+                        <button class="room" data-room="Anastasia">Anastasia</button>
+                    </div>
+                    <div class="room-option">
+                        <img src="Images/rooms/room2.jpg" alt="Raphaell">
+                        <button class="room" data-room="Raphaell">Raphaell</button>
+                    </div>
+                    <div class="room-option">
+                        <img src="Images/rooms/room3.jpg" alt="Saphire">
+                        <button class="room" data-room="Saphire">Saphire</button>
+                    </div>
+                    <div class="room-option">
+                        <img src="Images/rooms/room4.jpg" alt="Kronos">
+                        <button class="room" data-room="Kronos">Kronos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <button id="back-button">Back</button>
+            <span id="close-reservation-modal" class="close">&times;</span>
+            <h1>Make Reservation!</h1>
+            <h2>Your Space, Your Pace, Our Coffee</h2>
+            
+            <form id="reservation-form">
+                <div class="input-field">
+                    <label for="name">Enter your name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-field">
+                    <label for="email">Enter Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-field">
+                    <label for="phone">Enter Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                </div>
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </div>
+    </div>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+          <h1>Reservation Successfully Made!</h1>
+          <h2>A confirmation letter will be sent via E-mail.</h2>
+          <h2>Can't wait to see you in Space and Sip!</h2>
+          <button id="closeSuccessModal">Close</button>
+        </div>
+      </div>
+  
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>

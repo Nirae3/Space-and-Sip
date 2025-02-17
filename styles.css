@@ -86,21 +86,26 @@
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 50px;
     background-color: #301e14;
     color: #D0B49B;
 }
 
 .button:hover{ /*hover schedule button*/
-    background: #4837ff; /* this is a button for when you howver on top of schedule*/
+    background: #5a3825; /* this is a button for when you howver on top of schedule*/
     transition: all 0.1s ease;
 }
 
 
 .navbar__links:hover{ /*hover about/gallery/services button*/
-    color: #f77062;
+    color: #5a3825;
     transition: 0.1s ease;
 }
+
+html { /*make the services scroll behaviour smooth*/
+    scroll-behavior: smooth;
+}
+
 
 @media screen and (max-width: 960px){
     .navbar__container {
@@ -208,7 +213,7 @@
     background-color: #D0B49B;
 }
 
-.main__container{
+/* .main__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -220,11 +225,40 @@
     width: 100%;
     max-width: 1300px;
     padding: 0 90px;
+} */
+
+.main__container {
+    position: relative;
+    background: linear-gradient(
+        rgba(208, 180, 155, 0.5), 
+        rgba(208, 180, 155, 0.5)
+    ), url('Images/Opaque_bg/bg_rotated.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 80vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 90px;
 }
 
+/* .main__content{
+    position: 0px;
+    background-color: #D0B49B;
+    padding: 30px, 80px;
+    z-index: 2;
+}
+ */
 .main__content h1 {
     font-size: 4rem;
-    background-color: #301e14;
+    background-color: #1a100b;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -233,10 +267,10 @@
 }
 
 .main__content p {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 3rem;
     font-weight: 500;
-    color: #301e14;
+    color: #1a100b;
     -webkit-background-clip: text;
     font-family: 'Allura', sans-serif;
 }
@@ -261,16 +295,16 @@
     text-decoration: none;
 }
 
-.main__btn:after {
+.main__btn:after {   /*  Get Started button after the motion graphics*/
     position: absolute;
     content: '';
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #f77062;
-    transition:  all 0.35s;
-    border-radius: 4px;
+    background: #5a3825;
+    transition:  all 0.1s;
+    border-radius: 50px;
 }
 
 .main__btn:hover{
@@ -288,4 +322,167 @@
     margin-top: 0%;
     /* transform: translate(150px, -20px); */
 
+}
+
+
+
+/* General layout */
+/* General Layout */
+.services {
+    padding: 50px 20px;
+    background-color: #F5F5F5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Experience Inspirational Boost Section */
+.experience h1 {
+    font-family: 'Allura', cursive;  /* Font set to Allura */
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;  /* Space below the title */
+}
+
+.experience p {
+    font-family: 'Newsreader', serif;  /* Font Newsreader for description */
+    font-size: 1.5rem;
+    color: #050505;
+    margin-bottom: 40px;
+}
+
+/* Our Rooms Section */
+.our-rooms {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.our-rooms h2 {
+    font-family: 'Allura', cursive; /* Font set to Allura */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.room-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.room-images img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* Our Coffee Section */
+.our-coffee {
+    display: flex;
+    justify-content: center;  /* Center the content */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.coffee-image img {
+    max-width: 100%;
+    height: auto;
+    width: 50%;  /* Image takes up 50% of the container */
+}
+
+.coffee-text {
+    width: 40%;  /* Make the text container smaller */
+    text-align: center; /* Center the text */
+    padding: 20px;
+}
+
+.coffee-text h2 {
+    font-family: 'Allura', cursive; /* Font set to Allura */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.coffee-text p {
+    font-family: 'Newsreader', serif; /* Font Newsreader for the description */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .our-coffee {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coffee-image img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .coffee-text {
+        width: 80%;
+    }
+
+    .room-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .room-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.contact_us {
+    display: flex;
+    justify-content: center; /* Centers both elements while keeping them close */
+    align-items: center;
+    gap: 30px; /* Reduce space between text and map */
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.contact_us .info {
+    max-width: 450px;
+}
+
+.contact_us h1, .contact_us h3 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.contact_us p {
+    color: #6b6666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact_us .social-links p {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduce gap between icon and text */
+    margin: 5px 0; /* Adjust margins for spacing */
+}
+
+.contact_us .social-links img {
+    width: 20px; /* Tiny size for icons */
+    height: 20px;
+}
+
+.contact_us .map iframe {
+    border-radius: 10px;
 }

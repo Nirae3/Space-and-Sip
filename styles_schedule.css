@@ -1,0 +1,535 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    font-family: 'Newsreader', sans-serif;
+}
+
+.navbar { /*navigation pannel*/
+    background: #D0B49B;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar__container{ /*logo button*/
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+
+#navbar__logo{ /*logo button*/
+    background-color: #D0B49B;
+    background-image: linear-gradient(to top, #000000 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:  transparent;
+    display: flex;
+    align-items:  center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem{ /*about gallery services button*/
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{ /*about gallery services button*/
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{ /*about gallery services button*/
+    height: 80px;
+}
+
+.navbar__links{ /*about gallery services button*/
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn{ /*about gallery services button*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{ /*schedule button*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #301e14;
+    color: #D0B49B;
+}
+
+.button:hover{ /*hover schedule button*/
+    background: #5a3825; /* this is a button for when you howver on top of schedule*/
+    transition: all 0.1s ease;
+}
+
+
+.navbar__links:hover{ /*hover about/gallery/services button*/
+    color: #5a3825;
+    transition: 0.1s ease;
+}
+
+html { /*make the services scroll behaviour smooth*/
+    scroll-behavior: smooth;
+}
+
+
+@media screen and (max-width: 960px){
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #D0B49B;
+    }
+
+    .navbar__menu.active {
+        background: #D0B49B;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn{
+    padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        rgba(208, 180, 155, 0.5), 
+        rgba(208, 180, 155, 0.5)
+    ), url('Images/Opaque_bg/Cup\ of\ Tea.jpg');
+    
+    /*background: #1a0707;*/
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin: 0;
+    height: 100%;
+}
+
+
+/* Schedule Container */
+.schedule-container {
+    background: white;
+    padding: 70px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 650px;
+    position: absolute; 
+    left: 100px; 
+    top: 130px; 
+    z-index: 2;
+}
+
+
+/* Calendar Navigation */
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.nav-button {
+    background: #5a3825;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #5a3825;
+}
+
+/* Date Section */
+#dates {
+    display: flex;
+    gap: 8px;
+}
+
+.date {
+    padding: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    width: 55px;
+    transition: 0.3s ease;
+}
+
+.date:hover {
+    background: #997352;
+    color: white;
+}
+
+.date.selected {
+    background: #5a3825;
+    color: white;
+    font-weight: bold;
+}
+
+/* Time Buttons */
+.times {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.time {
+    background: #d0b49b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.time:hover {
+    background: #5a3825;
+}
+
+/* Next Button */
+#next-button {
+    background: #997352;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#next-button:hover {
+    background: #5a3825;
+}
+.image__container {
+    margin-left: 800px; 
+    z-index: 2;
+}
+
+.image__container img {
+    width: 300px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add highlighting styles */
+.selected {
+    background: #5a3825; /* Dark brown background for selected day or time */
+    color: white;
+    font-weight: bold;
+}
+
+.time.selected {
+    background: #61371f; /* Or any other color you prefer for the time */
+}
+
+#next-button.ready {
+    background-color: #778d7a; /* Green color to indicate the next step is ready */
+    color: white;
+}
+
+/* Add a transition for the button color change */
+#next-button {
+    transition: background-color 0.3s ease;
+}
+
+/* Modal styles */
+/* General Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 1000px;
+    position: relative;
+}
+
+/* Room Selection Modal */
+#room-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.room-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-option img {
+    width: 190px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.room-option button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #D0B49B;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.room-option button:hover {
+    background: #5a3825;
+}
+
+#next-button {
+    background: #997352;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#next-button:hover {
+    background: #5a3825;
+}
+
+/* Reservation Modal */
+#back-button {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 18px;
+    background-color: #D0B49B;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #5a3825;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#reservation-form button {
+    background: #997352;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#reservation-form button:hover {
+    background: #5a3825;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Add Highlighting styles for selected elements */
+.selected {
+    background: #5a3825; /* Dark brown background for selected day or time */
+    color: white;
+    font-weight: bold;
+}
+
+.time.selected {
+    background: #61371f; /* Or any other color you prefer for the time */
+}
+
+/* Success Modal Styles */
+#successModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if the modal content is too large */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black with transparency */
+  }
+  
+  #successModal .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  #successModal h1, #successModal h2 {
+    text-align: center;
+  }
+  
+  #successModal button {
+    display: block;
+    margin: 20px auto;
+  }
+  
