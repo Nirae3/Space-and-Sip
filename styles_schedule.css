@@ -368,13 +368,17 @@ body {
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-repeat: no-repeat; /* Ensures no repetition */
+    background-size: cover; /* Ensures background covers modal */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box; /* Prevents content overflow */
 }
+
 
 .modal-content {
     background: white;
@@ -533,3 +537,27 @@ body {
     margin: 20px auto;
   }
   
+
+  .success-logo {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space below logo */
+}
+
+
+#homeButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#homeButton:hover {
+    background-color: #45a049;
+}

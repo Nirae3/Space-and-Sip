@@ -486,3 +486,57 @@ html { /*make the services scroll behaviour smooth*/
 .contact_us .map iframe {
     border-radius: 10px;
 }
+
+
+.footer {
+    background-color: #D0B49B;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer__info, .footer__contact, .footer__social {
+    margin: 10px;
+}
+
+.footer h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer__social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer__social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer__social img:hover {
+    transform: scale(1.2);
+}
+
+.footer__copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}

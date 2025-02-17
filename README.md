@@ -1,10 +1,13 @@
 # Space-and-Sip
 Website Prototype
 
-Things to improve on.
-Home Page: 
+BUGS:
+Schedle!!!
 
-Get started button transition is acting weird
-Space and Sip needs a picture beside it in a shape of a coffee?
-Will we need a ribbon for people to be able to see the slogan?
-add a line after the navigation bar
+- After selecting the date and time, the back button works, but the X button doesn't when choosing a room.
+- Once a room is selected on the "Make Reservation!" page, the back button may or may not work. The X button should work.
+- Clicking "Schedule" again may take you to the "Make Reservation" page instead of the actual schedule page. To retry, exit "Make Reservation" using the X button, then go back to the "Choose a Room" page.
+
+
+Navigation Bar!!!
+- Sometimes, you need to click buttons in the navigation bar twice, especially after navigating through multiple pages. The "Services" button often requires this.

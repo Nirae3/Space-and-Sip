@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space and Sip</title>
+    <link rel="icon" href="Images/logo_cup.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="Images/logo_cup.png" alt="Logo" style="height: 85px; vertical-align: middle; margin-right: 10px;">
+                SPACE AND SIP</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/gallery.html" class="navbar__links">Gallery</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#services" class="navbar__links">Services</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/schedule.html" class="button">Schedule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="gallery">
+        <h1>Our Space & Atmosphere</h1>
+        <div class="gallery__grid">
+            <img src="Images/Happy People/Focused Moments in the Library.jpg" alt="Cozy Seating" class="gallery__img">
+            <img src="Images/Happy People/study date.jpg" alt="Study Spaces" class="gallery__img">
+            <img src="Images/Happy People/study & coffe.jpg" alt="Coffee & Work" class="gallery__img">
+            <img src="Images/Happy People/study.jpg" alt="Cafe Interior" class="gallery__img">
+            <img src="Images/rooms/room1.jpg" alt="Private Study Room" class="gallery__img">
+            <img src="Images/Brown_cup_3D.jpg" alt="Group Study Area" class="gallery__img">
+            <img src="Images/Cup_in_nature_1.jpg" alt="Group Study Area" class="gallery__img">
+            <img src="Images/Home_Page_Main.png" alt="Group Study Area" class="gallery__img">
+        </div>
+    </section>
+
+    <!-- Lightbox (Click to Expand Image) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox__content" id="lightboxImg">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
